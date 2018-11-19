@@ -498,4 +498,4 @@ client.on("guildCreate", guild => {
   client.channels.get("476342429575020544").send(embed)
 });
 
-client.login('NTEyMjk5MTkyNDc2MjM3ODQ1.DtQ7_A.vBxv_C3Y8Lu4kVNgBrO72eEuWsw');
+client.login('NTE0MDU1OTYzMjU5Njk5MjEw.DtQ_fw.UiVD6ejf-HLFcHOczR73SYxajb0');
