@@ -339,13 +339,10 @@ return;
         message.guild.members.forEach(m => {
    if(!message.member.hasPermission('ADMINISTRATOR')) return;
             var bc = new Discord.RichEmbed()
-            .addField(' » مرحبا : ', args)
+            .addField(' » الرسالة : ', args)
             .setColor('#ff0000')
-	    .addField(' » الرسالة : ', args)
-	    .setColor('#ff0000')
             // m.send(`[${m}]`);
             m.send(`${m}`,{embed: bc});
-            .addField(' » شكرا لسماعك لرسالتنا : ', args)
         });
     }
     } else {
