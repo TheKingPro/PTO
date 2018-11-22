@@ -5,9 +5,9 @@ const client = new Discord.Client();
 client.on('ready', () => {
   console.log(`Welcome Bro ${client.user.tag}!`);
 });
-client.on('message', message => {
-    var prefix = "_";
-    
+const prefix = '_'
+
+client.on('message', message => {    
     if (message.author.id === client.user.id) return;
     if (message.guild) {
    let embed = new Discord.RichEmbed()
