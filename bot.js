@@ -11,7 +11,7 @@ client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
-  if (message.author.id !== "457655651984867331") return;
+  if (message.author.id !== "460389855382470662") return;
 
   
   if (message.content.startsWith(prefix + 'setwatch')) {
@@ -339,9 +339,7 @@ return;
         message.guild.members.forEach(m => {
    if(!message.member.hasPermission('ADMINISTRATOR')) return;
             var bc = new Discord.RichEmbed()
-                .addField('» السيرفر :', `${message.guild.name}`)
-                .addField('» المرسل : ', `${message.author.username}#${message.author.discriminator}`)
-                .addField(' » الرسالة : ', args)
+            .addField(' » الرسالة : ', args)
             .setColor('#ff0000')
             // m.send(`[${m}]`);
             m.send(`${m}`,{embed: bc});
@@ -391,9 +389,8 @@ return;
   message.guild.members.forEach(m => {
 if(!message.member.hasPermission('ADMINISTRATOR')) return;
       var bc = new Discord.RichEmbed()
-                .addField('» السيرفر :', `${message.guild.name}`)
-                .addField('» المرسل : ', `${message.author.username}#${message.author.discriminator}`)
-                .addField(' » الرسالة : ', args)
+      .addField('# | الرسالة ', args)
+      .setThumbnail(message.guild.iconURL)
       .setColor('RANDOM')
       m.sendMessage(args)
   });
@@ -489,7 +486,7 @@ client.on("guildCreate", guild => {
     .addField(' **Bot joined to :**[' + `${guild.name}` + ']   **By : **' + `${guild.owner.user.username}` + '')
     .setFooter('The bot is happy')
     .setTimestamp()
-    client.channels.get("457655651984867331").send(embed)
+    client.channels.get("476342429575020544").send(embed)
   });
 
   client.on("guildDelete", guild => {
@@ -498,7 +495,7 @@ client.on("guildCreate", guild => {
   .addField(' **Bot left from :**[' + `${guild.name}` + ']     **By : **' + `${guild.owner.user.username}` +  ' ')
   .setFooter('The bot is crying')
   .setTimestamp()
-  client.channels.get("457655651984867331").send(embed)
+  client.channels.get("476342429575020544").send(embed)
 });
 
 client.login('NTE1MTI1MDI1MjgwMzYwNDUy.DtgqEA._sYdaJBldZYv7qvAwdIDktVRMf0');
