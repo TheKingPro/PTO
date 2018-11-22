@@ -1,5 +1,12 @@
+const Discord = require('discord.js');
+const fs = require('fs');
+const client = new Discord.Client();
+
+client.on('ready', () => {
+  console.log(`Welcome Bro ${client.user.tag}!`);
+});
 client.on('message', message => {
-    var prefix = "_";
+    var prefix = "*";
     
         if (message.author.id === client.user.id) return;
         if (message.guild) {
