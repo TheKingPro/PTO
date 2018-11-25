@@ -483,22 +483,5 @@ message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم 
   });
   }
 });
-client.on("guildCreate", guild => {
-    let embed = new Discord.RichEmbed () 
-    .setTitle('Bot Logs')
-    .addField(' **Bot joined to :**[' + `${guild.name}` + ']   **By : **' + `${guild.owner.user.username}` + '')
-    .setFooter('The bot is happy')
-    .setTimestamp()
-    client.channels.get("457655651984867331").send(embed)
-  });
-
-  client.on("guildDelete", guild => {
-  let embed = new Discord.RichEmbed ()
-  .setTitle('Bot Logs')
-  .addField(' **Bot left from :**[' + `${guild.name}` + ']     **By : **' + `${guild.owner.user.username}` +  ' ')
-  .setFooter('The bot is crying')
-  .setTimestamp()
-  client.channels.get("457655651984867331").send(embed)
-});
 
 client.login('NDk4MTQxODkwNjY4MDAzMzMw.Dtr5bA.taL7eWW6qtC_-FI-TPNTG8ylawg');
